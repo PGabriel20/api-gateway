@@ -3,10 +3,18 @@ version: '3.8'
 services:
   users:
     build: ./internal/users
+    networks:
+      - app-network
   orders:
     build: ./internal/orders
+    networks:
+      - app-network
   gateway:
     build: ./gateway
     ports:
       - "8080:8080"
-  
+    networks:
+      - app-network
+  networks:
+    app-network:
+      driver: bridge
