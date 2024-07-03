@@ -3,9 +3,10 @@ version: '3.8'
 services:
   users:
     build: ./internal/users
-    ports:
-      - "8081:8081"
   orders:
     build: ./internal/orders
+  gateway:
+    build: ./gateway
     ports:
-      - "8082:8082"
+      - "8080:8080"
+  
