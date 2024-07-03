@@ -1,7 +1,7 @@
 
 # Microservices with NGINX API Gateway and Rate Limiting
 
-This project demonstrates a simple microservices architecture using Golang for backend services, Docker for containerization, and NGINX as an API gateway with rate limiting.
+This project demonstrates a simple microservices architecture using Golang for backend services, Docker for containerization, and NGINX as an API gateway with rate limiting and load balancing.
 
 ## Directory Structure
 
@@ -12,6 +12,7 @@ This project demonstrates a simple microservices architecture using Golang for b
 ## Features
 
 - **API Gateway**: NGINX configured as an API gateway to route requests to appropriate microservices.
+- **Load Balancing**: NGINX configured with load balancing to distribute traffic among multiple instances of backend services.
 - **Rate Limiting**: Configured rate limiting to protect backend services from excessive requests.
 
 ## Setup
@@ -35,13 +36,3 @@ This project demonstrates a simple microservices architecture using Golang for b
    cd api-gateway
    docker compose up -d
    ```
-
-## Contributing
-
-Contributions are welcome! Fork the repository and submit a pull request with your enhancements.
-
-
-## License
-
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
-
