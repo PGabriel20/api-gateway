@@ -36,3 +36,18 @@ This project demonstrates a simple microservices architecture using Golang for b
    cd api-gateway
    docker compose up -d
    ```
+
+## Usage
+
+- Access the API gateway at http://localhost:8080.
+- Send requests to /users or /orders endpoints to interact with respective microservices.
+- NGINX handles load balancing and rate limiting as configured..
+## Contributing
+
+Contributions are welcome! Fork the repository and submit a pull request with your enhancements.
+
+
+## License
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
