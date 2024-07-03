@@ -1,18 +1,31 @@
 version: '3.8'
 
 services:
-  users:
+  users-service:
     build: ./internal/users
+    image: users-service
+    container_name: users-service
     networks:
       - app-network
-  orders:
+  orders-service:
     build: ./internal/orders
+    image: orders-service
+    container_name: orders-service
+    networks:
+      - app-network
+  orders-service-2:
+    build: ./internal/orders
+    image: orders-service-2
+    container_name: orders-service-2
     networks:
       - app-network
   gateway:
     build: ./gateway
+    image: api-gateway
+    container_name: api-gateway
     ports:
       - "8080:8080"
+      - "8083:8083"
     networks:
       - app-network
 networks:
